@@ -10,7 +10,7 @@ router.use(express.json());
 router.use(bodyParser.json());
 
 // cron job
-cron.schedule('*/5 * * * *', async () => {
+cron.schedule('0 */1 * * *', async () => {
   try {
     const currentDate = new Date();
     const quizzes = await Quiz.find();
