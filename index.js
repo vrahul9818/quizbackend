@@ -31,7 +31,7 @@ mongoose
 
 
 //routes
-app.use("/quizzes", rateLimiter,quizRoute);
+app.use("/", rateLimiter,quizRoute);
 app.use(cronJob);
 app.use(rateLimiter);
 

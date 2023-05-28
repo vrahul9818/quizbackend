@@ -14,7 +14,7 @@ const Quiz = require("../model/schema")
 app.use(express.json());
 app.use(bodyParser.json());
 
-router.post('/', async (req, res) => {
+router.post('/quizzes', async (req, res) => {
     try {
       const quiz = new Quiz(req.body);
       await quiz.save();
@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
   });
 
 
-  router.get('/all', async (req, res) => {
+  router.get('/quizzes/all', async (req, res) => {
     try {
       const quizzes = await Quiz.find();
       res.json(quizzes);
@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
 
 
   
-  router.get('/active', async (req, res) => {
+  router.get('/quizzes/active', async (req, res) => {
     try {
       const currentDate = new Date();
       const quizzes = await Quiz.find({
@@ -59,7 +59,7 @@ router.post('/', async (req, res) => {
   
 
 
-  router.get('/:id/result', async (req, res) => {
+  router.get('/quizzes/:id/result', async (req, res) => {
     try {
       const quiz = await Quiz.findById(req.params.id);
       if (!quiz) {
@@ -81,7 +81,7 @@ router.post('/', async (req, res) => {
    
 
 
-router.get("/routes", (req, res) => {
+router.get("/quizzes/routes", (req, res) => {
   res.send("okk");
 });
 
