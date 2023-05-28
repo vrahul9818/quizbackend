@@ -1,0 +1,23 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "quiz",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rahul Verma",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.2.1",
+    "node-cron": "^3.0.2",
+    "nodemon": "^2.0.22",
+    "parser": "^0.1.4"
+  }
+}
